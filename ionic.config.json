@@ -1,0 +1,7 @@
+{
+  "name": "bateauMagic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
