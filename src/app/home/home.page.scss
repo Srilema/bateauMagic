@@ -25,3 +25,10 @@
 #container a {
   text-decoration: none;
 }
+
+.menuBalls{
+  display:flex;
+  justify-content: space-evenly;
+  width:100%;
+  flex-wrap: wrap;
+}
