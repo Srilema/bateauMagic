@@ -1,13 +1,9 @@
-<ion-header [translucent]="true">
-  <ion-toolbar  color="seablue" text-color="white">
-    <ion-title color="light">
-      Bateau Magique
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true" color="cream">
+  <app-header></app-header>
   <div class="presentation">
+    <div class="presImg">
+      <ion-img src=".../assets/photos/headboat.jpg"></ion-img>
+    </div>
     <p>
       Bienvenue dans notre application, reliant les bateaux de pêches aux restaurants, et fournissant toutes pleins de bonne recettes pour exploiter au mieux nos produits
     </p>
@@ -23,4 +19,9 @@
       <ion-icon slot="icon-only" name="pizza-outline" size="large"></ion-icon>
     </ion-button>
   </div>
+  <div class="alignDiv">
+    <ion-button shape="round" color="skyblue" size="large">
+      Produits et Promotions
+    </ion-button>
+</div>
 </ion-content>
