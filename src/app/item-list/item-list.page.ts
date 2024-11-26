@@ -5,6 +5,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardHeader, Io
 import { Item } from '../models/item';
 import { ItemsService } from '../Services/items.service';
 import { CardListComponent } from '../component/card-list/card-list.component';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -15,14 +16,22 @@ import { CardListComponent } from '../component/card-list/card-list.component';
   imports: [IonCardContent, IonCardTitle, IonCardHeader, IonCard, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,CardListComponent]
 })
 export class ItemListPage implements OnInit {
-itemsList!:Item[];
+categorie!: string;
+nameCategorie!: string;
 
-  constructor(private itemsService: ItemsService) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    // Appel au service et souscription
-   
+    this.route.params.subscribe(params => {
+      this.categorie = params['categorie'];
+      console.log('categorie :',this.categorie);
+      if(this.categorie == 'bateaux'){
+        this.nameCategorie = 'Patenaire bateaux';
+      }if (this.categorie == 'restaurants') {
+        this.nameCategorie = 'Patenaire restaurants';
+      }if (this.categorie == 'recettes'){
+        this.nameCategorie = 'Patenaire recettes';
+      }
+    });
   }
-
-
 }
