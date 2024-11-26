@@ -1,17 +1,7 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="seablue" text-color="white">
-    <ion-title color="light">
-      Bateau Magique
-    </ion-title>
-    <ion-button slot="end" shape="round" color="skyblue" size="large">
-      <ion-icon slot="icon-only" size="large" name="cart-outline"></ion-icon>
-    </ion-button>
-  </ion-toolbar>
-</ion-header>
-
 
 
 <ion-content [fullscreen]="true" class="content-background-color">
+  <app-header></app-header>
   <ion-card class="content-background-color">
     <ion-card-header>
       <ion-card-title align="left" >
@@ -26,7 +16,7 @@
       <p class="description">
         {{ Description }}
       </p>
-      <div>
+      <div [Visibility] = {{isProduit}}>
         <ion-button (click) = "onLoadPanier()">Ajouter au panier </ion-button>
       </div>
     </ion-card-content>
