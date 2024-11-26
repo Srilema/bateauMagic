@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonIcon, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton } from '@ionic/angular/standalone';
 import { Item } from '../models/item';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -10,13 +10,13 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './description.page.html',
   styleUrls: ['./description.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton]
+  imports: [IonIcon, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton]
 })
 export class DescriptionPage implements OnInit {
   Title: string = "Restaurant de l'hotel";
   Description: string = "Description du restaurant";
-  photoUrl: string = "C:\Users\Sofia\source\repos\bateauMagic\src\assets\photos\restaurant\images.jpeg";
-  categorie: string = "restaurant"
+  photoUrl: string = "..\assets\photos\restaurant\photo.jpeg";
+  isProduit: boolean = false;
   constructor(private route : ActivatedRoute, private router: Router) { 
 
   }

@@ -13,5 +13,9 @@ export const routes: Routes = [
     path: 'description',
     loadComponent: () => import('./description/description.page').then( m => m.DescriptionPage)
   },
+  {
+    path: 'item-description',
+    loadComponent: () => import('./item-description/item-description.page').then( m => m.ItemDescriptionPage)
+  },
 
 ];
