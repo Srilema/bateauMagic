@@ -9,7 +9,8 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
-  },  {
+  },
+  {
     path: 'description',
     loadComponent: () => import('./description/description.page').then( m => m.DescriptionPage)
   },
