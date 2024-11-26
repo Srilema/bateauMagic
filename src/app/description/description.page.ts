@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardContent } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton } from '@ionic/angular/standalone';
 import { Item } from '../models/item';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './description.page.html',
   styleUrls: ['./description.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonCard, IonCardHeader, IonCardTitle, IonCardContent]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton]
 })
 export class DescriptionPage implements OnInit {
   Title: string = "Restaurant de l'hotel";
@@ -30,6 +30,10 @@ export class DescriptionPage implements OnInit {
       this.Description = state.item.description;
       this.photoUrl = state.item.photo;
     }
+  }
+
+  onLoadPanier(){
+
   }
     
 }

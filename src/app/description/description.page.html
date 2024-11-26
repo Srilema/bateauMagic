@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="content-background-color">
-  <ion-card class="presentation-card">
+  <ion-card class="content-background-color">
     <ion-card-header>
       <ion-card-title align="left" >
         {{ Title }}
@@ -19,6 +19,9 @@
       <p class="description">
         {{ Description }}
       </p>
+      <div>
+        <ion-button (click) = "onLoadPanier()">Ajouter au panier </ion-button>
+      </div>
     </ion-card-content>
   </ion-card>
 
