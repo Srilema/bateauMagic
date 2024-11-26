@@ -9,5 +9,13 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
+  },  {
+    path: 'product',
+    loadComponent: () => import('./product/product/product.page').then( m => m.ProductPage)
   },
+  {
+    path: 'list-product',
+    loadComponent: () => import('./list-product/list-product.page').then( m => m.ListProductPage)
+  },
+
 ];
