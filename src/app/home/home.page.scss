@@ -25,3 +25,31 @@
 #container a {
   text-decoration: none;
 }
+
+.menuBalls{
+  display:flex;
+  justify-content: space-evenly;
+  width:100%;
+  flex-wrap: wrap;
+  padding:0.5rem;
+}
+
+.presentation{
+  padding: 1rem;
+}
+
+.alignDiv{
+  display: flex;
+  justify-content: center;
+  width:100%;
+  padding:0.5rem;
+}
+
+.presImg{
+  height:15rem;
+  ion-img{
+    object-fit: cover;
+    height:100%;
+    width: 100%;
+  }
+}

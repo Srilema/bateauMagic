@@ -1,20 +1,27 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content [fullscreen]="true" color="cream">
+  <app-header></app-header>
+  <div class="presentation">
+    <div class="presImg">
+      <ion-img src=".../assets/photos/headboat.jpg"></ion-img>
+    </div>
+    <p>
+      Bienvenue dans notre application, reliant les bateaux de pêches aux restaurants, et fournissant toutes pleins de bonne recettes pour exploiter au mieux nos produits
+    </p>
   </div>
+  <div class="menuBalls">
+    <ion-button shape="round" color="skyblue" size="large">
+      <ion-icon slot="icon-only" size="large" name="restaurant-outline"></ion-icon>
+    </ion-button>
+    <ion-button shape="round" color="skyblue" size="large">
+      <ion-icon slot="icon-only" size="large" name="boat-outline"></ion-icon>
+    </ion-button>
+    <ion-button shape="round" color="skyblue" size="large">
+      <ion-icon slot="icon-only" name="pizza-outline" size="large"></ion-icon>
+    </ion-button>
+  </div>
+  <div class="alignDiv">
+    <ion-button shape="round" color="skyblue" size="large">
+      Produits et Promotions
+    </ion-button>
+</div>
 </ion-content>
