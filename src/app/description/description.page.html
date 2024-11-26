@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="header-background-color">
+    <ion-title class="police-title"><p align="center">Bateau Magique</p></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="content-background-color">
+  <ion-card class="presentation-card">
+    <ion-card-header>
+      <ion-card-title align="left" >
+        {{ Title }}
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="image-container">
+        <img [src]="photoUrl" alt="Photo" class="rounded-photo" align="center" />
+      </div>
+      <p class="description">
+        {{ Description }}
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
