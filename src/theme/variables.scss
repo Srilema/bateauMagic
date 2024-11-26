@@ -1,2 +1,18 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+:root{
+    //Color Picker to use
+    --ion-color-skyblue: #0496FF;
+    --ion-color-seablue: #1C448E;
+    --ion-color-cream: #F5F8DE;
+}
+
+.ion-color-skyblue{
+    --ion-color-base: var(--ion-color-skyblue);
+}
+.ion-color-seablue{
+    --ion-color-base: var(--ion-color-seablue);
+}
+.ion-color-cream{
+    --ion-color-base: var(--ion-color-cream);
+}
