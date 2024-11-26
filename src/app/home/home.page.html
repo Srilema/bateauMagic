@@ -2,21 +2,21 @@
   <app-header></app-header>
   <div class="presentation">
     <div class="presImg">
-      <ion-img src=".../assets/photos/headboat.jpg"></ion-img>
+      <ion-img src="assets/photos/headboat.jpg"></ion-img>
     </div>
     <p>
       Bienvenue dans notre application, reliant les bateaux de pêches aux restaurants, et fournissant toutes pleins de bonne recettes pour exploiter au mieux nos produits
     </p>
->>>>>>> master
+
   </div>
   <div class="menuBalls">
-    <ion-button shape="round" color="skyblue" size="large">
+    <ion-button (click)="OnCardList('restaurants')" shape="round" color="skyblue" size="large">
       <ion-icon slot="icon-only" size="large" name="restaurant-outline"></ion-icon>
     </ion-button>
-    <ion-button shape="round" color="skyblue" size="large">
+    <ion-button (click)="OnCardList('bateaux')" shape="round" color="skyblue" size="large">
       <ion-icon slot="icon-only" size="large" name="boat-outline"></ion-icon>
     </ion-button>
-    <ion-button shape="round" color="skyblue" size="large">
+    <ion-button (click)="OnCardList('recettes')" shape="round" color="skyblue" size="large">
       <ion-icon slot="icon-only" name="pizza-outline" size="large"></ion-icon>
     </ion-button>
   </div>
