@@ -14,5 +14,8 @@ export const routes: Routes = [
     path: 'item-list/:categorie',
     loadComponent: () => import('./item-list/item-list.page').then( m => m.ItemListPage)
   },
-
+  {
+    path: 'panier',
+    loadComponent: () => import('./panier/panier.page').then( m => m.PanierPage)
+  },
 ];
