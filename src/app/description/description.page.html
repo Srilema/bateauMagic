@@ -5,7 +5,7 @@
   <ion-card class="content-background-color">
     <ion-card-header>
       <ion-card-title align="left" >
-        {{ Title }}
+        {{ item.name }}
       </ion-card-title>
     </ion-card-header>
 
@@ -14,11 +14,8 @@
         <img [src]="photoUrl" alt="Photo" class="rounded-photo" align="center" />
       </div>
       <p class="description">
-        {{ Description }}
+        {{ item.description }}
       </p>
-      <div [Visibility] = {{isProduit}}>
-        <ion-button (click) = "onLoadPanier()">Ajouter au panier </ion-button>
-      </div>
     </ion-card-content>
   </ion-card>
 
