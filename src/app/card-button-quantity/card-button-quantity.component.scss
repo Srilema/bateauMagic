@@ -1,0 +1,51 @@
+
+ion-modal::before {
+  content: '';  /* Ajoute un élément avant la modal */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);  /* Fond noir semi-transparent */
+  z-index: -1;  /* Place ce fond derrière la modal */
+}
+ion-modal {
+  position: fixed;  /* Positionne la modal par rapport à l'écran */
+  top: 50%;  /* Place la modal à 50% de la hauteur de l'écran */
+  left: 50%;  /* Place la modal à 50% de la largeur de l'écran */
+  transform: translate(-50%, -50%);  /* Déplace la modal de 50% de sa propre largeur/hauteur pour la centrer */
+  border: 3px solid black;
+
+  width: 80%;  /* Taille de la modal : 80% de la largeur de l'écran */
+  max-width: 500px;  /* Limite de largeur à 500px */
+  
+  height: 25%;  /* Hauteur automatique selon le contenu */
+  max-height: 70%;  /* Limite de hauteur à 70% de l'écran */
+  
+  border-radius: 10px;  /* Coins arrondis */
+  z-index: 1000;  /* S'assure que la modal est au-dessus des autres éléments */
+}
+.green-button {
+  width: 50%;
+  --background: #28a745; 
+  border-radius: 8px;   
+  --color: white;     
+  --padding-start: 16px;  
+  --padding-end: 16px;   
+}
+.red-button {
+  width: 50%;
+  height: auto;
+  --background: #dc3545; 
+  --border-radius: 8px;   
+  --color: white;        
+  --padding-start: 16px; 
+  --padding-end: 16px;    
+}
+.button-modal{
+
+  padding-left: 10%;
+  width: 75%;
+  height: 75%;
+}
+

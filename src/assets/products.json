@@ -1,34 +1,116 @@
 {
   "products": [
     {
-      "name": "Produit 1",
+      "name": "Morue",
       "price": "$10",
       "description": "Description du produit 1.",
-      "imageUrl": "https://via.placeholder.com/150"
+      "imageUrl": "assets/photos/morue.jpg"
     },
     {
-      "name": "Produit 2",
+      "name": "Cabillaud",
       "price": "$20",
       "description": "Description du produit 2.",
-      "imageUrl": "https://via.placeholder.com/150"
+      "imageUrl": "assets/photos/cabillaud.jpg"
     },
     {
-      "name": "Produit 3",
+      "name": "Bar",
       "price": "$30",
       "description": "Description du produit 3.",
-      "imageUrl": "https://via.placeholder.com/150"
+      "imageUrl": "assets/photos/bar.jpg"
     },
     {
       "name": "Produit 4",
       "price": "$40",
       "description": "Description du produit 4.",
-      "imageUrl": "https://via.placeholder.com/150"
+      "imageUrl": "assets/photos/bar.jpg"
     },
     {
       "name": "Produit 5",
       "price": "$50",
       "description": "Description du produit 5.",
-      "imageUrl": "https://via.placeholder.com/150"
+      "imageUrl": "assets/photos/bar.jpg"
+    }
+  ],
+  "promotions": [
+    {
+      "name": "Produit 1",
+      "originalPrice": "$10",
+      "promoPrice": "$7",
+      "discount": "30%",
+      "description": "Description du produit 1, maintenant en promotion !",
+      "imageUrl": "assets/photos/bar.jpg"
+    },
+    {
+      "name": "Produit 2",
+      "originalPrice": "$20",
+      "promoPrice": "$15",
+      "discount": "25%",
+      "description": "Description du produit 2, maintenant en promotion !",
+      "imageUrl": "assets/photos/morue.jpg"
+    },
+    {
+      "name": "Produit 3",
+      "originalPrice": "$30",
+      "promoPrice": "$24",
+      "discount": "20%",
+      "description": "Description du produit 3, maintenant en promotion !",
+      "imageUrl": "assets/photos/cabillaud.jpg"
+    },
+    {
+      "name": "Produit 4",
+      "originalPrice": "$40",
+      "promoPrice": "$32",
+      "discount": "20%",
+      "description": "Description du produit 4, maintenant en promotion !",
+      "imageUrl": "assets/photos/bar.jpg"
+    },
+    {
+      "name": "Produit 5",
+      "originalPrice": "$50",
+      "promoPrice": "$40",
+      "discount": "20%",
+      "description": "Description du produit 5, maintenant en promotion !",
+      "imageUrl": "assets/photos/morue.jpg"
+    },
+    {
+      "name": "Produit 1",
+      "originalPrice": "$10",
+      "promoPrice": "$7",
+      "discount": "30%",
+      "description": "Description du produit 1, maintenant en promotion !",
+      "imageUrl": "assets/photos/bar.jpg"
+    },
+    {
+      "name": "Produit 2",
+      "originalPrice": "$20",
+      "promoPrice": "$15",
+      "discount": "25%",
+      "description": "Description du produit 2, maintenant en promotion !",
+      "imageUrl": "assets/photos/morue.jpg"
+    },
+    {
+      "name": "Produit 3",
+      "originalPrice": "$30",
+      "promoPrice": "$24",
+      "discount": "20%",
+      "description": "Description du produit 3, maintenant en promotion !",
+      "imageUrl": "assets/photos/cabillaud.jpg"
+    },
+    {
+      "name": "Produit 4",
+      "originalPrice": "$40",
+      "promoPrice": "$32",
+      "discount": "20%",
+      "description": "Description du produit 4, maintenant en promotion !",
+      "imageUrl": "assets/photos/bar.jpg"
+    },
+    {
+      "name": "Produit 5",
+      "originalPrice": "$50",
+      "promoPrice": "$40",
+      "discount": "20%",
+      "description": "Description du produit 5, maintenant en promotion !",
+      "imageUrl": "assets/photos/morue.jpg"
     }
   ]
 }

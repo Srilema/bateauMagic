@@ -1,0 +1,23 @@
+<!-- Vérifie que selectedCategory est défini -->
+  <ion-card *ngFor="let item of selectedCategory"> <!-- Affiche les items de la catégorie sélectionnée -->
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3">
+          <!-- Utilisation de la photo de l'item si disponible -->
+          <img [src]="'https://via.placeholder.com/200x200'" alt="Image de la carte" style="width: 100%; border-radius: 8px;">
+        </ion-col>
+
+        <ion-col size="8">
+          <ion-card-header>
+            <ion-card-title>{{ item.name }}</ion-card-title> <!-- Affichage du nom de l'item -->
+            <ion-card-subtitle>Sous-titre</ion-card-subtitle> <!-- Vous pouvez remplacer par un sous-titre dynamique si nécessaire -->
+          </ion-card-header>
+          <ion-card-content>
+            Voici une description courte pour votre carte. Vous pouvez ajouter plus de détails ici.
+            <ion-button expand="block" color="primary" style="margin-top: 16px;">Voir plus</ion-button>
+          </ion-card-content>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+

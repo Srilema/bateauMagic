@@ -1,0 +1,10 @@
+{
+  "list": [
+    { "categorie":"bateaux" ,"name": "Bateau 1", "description": "Description du bateau 1" },
+    { "categorie":"bateaux" ,"name": "Bateau 2", "description": "Description du bateau 2" },
+    { "categorie":"restaurants" ,"name": "Restaurant 1", "description": "Description du restaurant 1" },
+    { "categorie":"restaurants" ,"name": "Restaurant 2", "description": "Description du restaurant 2" },
+    { "categorie":"recettes" ,"name": "Recette 1", "description": "Description de la recette 1" },
+    { "categorie":"recettes" ,"name": "Recette 2", "description": "Description de la recette 2" }
+  ]
+}
