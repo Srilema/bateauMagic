@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonIcon } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { cartOutline } from 'ionicons/icons';
@@ -8,15 +9,21 @@ import { cartOutline } from 'ionicons/icons';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   standalone:true,
-  imports: [IonHeader, IonToolbar, IonTitle, IonButton, IonIcon],
+  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonIcon],
   
 })
 export class HeaderComponent  implements OnInit {
 
-  constructor() {
+  constructor(private router:Router) {
     addIcons({cartOutline})
    }
 
   ngOnInit() {}
+  backHome(){
+    this.router.navigate(['/']);
+  }
+  goToCart(){
+    this.router.navigate(['/panier']);
+  }
 
 }

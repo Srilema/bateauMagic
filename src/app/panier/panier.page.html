@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true" color="cream">
+  <app-header></app-header>
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>Panier</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-card class="ion-text-center">
+  <ion-card-title>Votre Panier</ion-card-title>
+  <ion-list class="panierListe" *ngFor="let obj of list"> 
+      <ion-item class="panierListItem">
+        <ion-col color="seablue">
+          {{obj.name}}
+        </ion-col>
+        <ion-col>
+          {{obj.price}}
+        </ion-col>
+        <ion-col>
+          {{obj.quantity}}
+        </ion-col>
+      </ion-item>
+  </ion-list>
+  <ion-card-title>
+    Total: {{total}} $
+  </ion-card-title>
+</ion-card>
+
+</ion-content>
