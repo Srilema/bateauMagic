@@ -9,7 +9,7 @@ import { cartOutline } from 'ionicons/icons';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   standalone:true,
-  imports: [IonHeader, IonToolbar, IonTitle, IonButton, IonIcon],
+  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonIcon],
   
 })
 export class HeaderComponent  implements OnInit {

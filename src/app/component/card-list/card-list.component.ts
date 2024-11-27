@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCardSubtitle, IonButton, IonGrid, IonRow, IonCol, IonList } from "@ionic/angular/standalone";
 import { ItemsService } from 'src/app/Services/items.service';
 import { Item } from 'src/app/models/item';
@@ -50,5 +50,11 @@ export class CardListComponent implements OnInit {
         console.error('Erreur de chargement des données:', error);
       },
     });
+  }
+  loadDescription(item: Item){
+    let navigationExtras: NavigationExtras = {
+      state: {item: item}
+    }
+    this.router.navigate(['/description'], navigationExtras)
   }
 }
