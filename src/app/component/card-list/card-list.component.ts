@@ -10,7 +10,7 @@ import { Item } from 'src/app/models/item';
   templateUrl: './card-list.component.html',
   styleUrls: ['./card-list.component.scss'],
   standalone: true,
-  imports: [IonList, IonCol, IonRow, IonGrid, IonButton, IonCardSubtitle, IonCardTitle, IonCardHeader, CommonModule, IonCard, IonCardContent]
+  imports: [IonCol, IonRow, IonGrid, IonButton, IonCardSubtitle, IonCardTitle, IonCardHeader, CommonModule, IonCard, IonCardContent]
 })
 export class CardListComponent implements OnInit {
   list!: Item[];

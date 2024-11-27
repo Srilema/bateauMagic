@@ -3,13 +3,14 @@ import { IonCol, IonTitle, IonHeader, IonToolbar, IonCard,IonContent,IonGrid,Ion
 import { ProductsService } from '../Service/products.service';
 import { Product } from '../models/product.model';
 import { CommonModule } from '@angular/common';
+import { CardButtonQuantityComponent } from "../card-button-quantity/card-button-quantity.component";
 
 @Component({
   selector: 'app-card-product',
   templateUrl: './card-product.component.html',
   styleUrls: ['./card-product.component.scss'],
   standalone: true,
-  imports: [IonHeader, IonToolbar, IonCard, IonCol, IonTitle,IonContent,IonGrid,IonRow,IonCardHeader,IonCardSubtitle,IonCardTitle,IonCardContent,CommonModule], 
+  imports: [IonCard, IonCol, IonContent, IonGrid, IonRow, IonCardHeader, IonCardSubtitle, IonCardTitle, CommonModule, CardButtonQuantityComponent], 
 })
 export class CardProductComponent implements OnInit {
   productsList!:Product[];
