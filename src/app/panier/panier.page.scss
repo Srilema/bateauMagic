@@ -1,0 +1,37 @@
+ion-item{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    padding:0.25rem;
+    justify-content: space-evenly;
+    margin: 0.25rem;
+    @media screen and (max-width:900px) {
+        margin:0.5rem;
+        padding-left: 0.1rem;
+        padding-right:0.1rem;
+    }
+}
+ion-card{
+    margin:5rem;
+    padding-top:1rem;
+    padding-bottom: 1rem;
+    @media screen and (max-width:900px) {
+        margin:0.5rem;
+    }
+}
+.centerBut{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    justify-content: center;
+}
+
+ion-item.invalid{
+    --border-color: red !important;
+    --border:35px;
+}
+
+.redText{
+    color:red;
+    padding-left: 1rem;
+}

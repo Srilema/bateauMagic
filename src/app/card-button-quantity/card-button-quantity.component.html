@@ -1,0 +1,20 @@
+<ion-button (click)="openModal()" class="button-modal">Ajout au panier</ion-button>
+
+<ion-modal [isOpen]="isModalOpen" (ionModalDidDismiss)="onModalDismiss()" [cssClass]="'custom-modal'">
+  <ng-template>
+    <ion-content>
+      <ion-item>
+        <ion-label position="floating">Saisir la quantité souhaité</ion-label>
+        <ion-input [(ngModel)]="quantity" ></ion-input>
+      </ion-item>
+      <ion-row>
+        <ion-col size="4">
+          <ion-button class="green-button" expand="full" (click)="envoiData()">Ajouter</ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button class="red-button" expand="full" (click)="closeModal()">Fermer</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-content>
+  </ng-template>
+</ion-modal>

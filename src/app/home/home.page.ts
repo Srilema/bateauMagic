@@ -29,4 +29,8 @@ export class HomePage {
     OnCardList(categorie:string){
       this.router.navigate(['/item-list',categorie]);
     }
+
+    OnProducts(){
+      this.router.navigate(['/list-product']);
+    }
 }
