@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit} from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, Validator } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 import { IonItem, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonButton, IonGrid, IonRow, IonCol, IonList, IonInput, IonSelect, IonSelectOption } from "@ionic/angular/standalone";
 import { HeaderComponent } from '../header/header.component';
@@ -27,6 +27,12 @@ export class PanierPage implements OnInit {
   deliveryChoice!:boolean;
   restaurants!:Item[];
   categorie="restaurants";
+  formComp!:boolean;
+
+  //variables pour commande et gestion de la forme
+  name!:string;
+  nickname!:string;
+  resto!:string;
 
   constructor(private panierService: PanierService, private itemsService: ItemsService) {
    }
@@ -34,6 +40,7 @@ export class PanierPage implements OnInit {
   ngOnInit() {
     this.loadPanier();
     this.deliveryChoice = false;
+    this.formComp = false;
   }
 
   loadPanier(){
@@ -88,6 +95,13 @@ export class PanierPage implements OnInit {
   }
 
   finishCommand(){
-    console.log("Vous avez terminé la commande! :D");
+    if(this.name ==null || this.nickname ==null || this.resto==null){
+      console.error('Veuillez remplir les champs nécessaire');
+      this.formComp=true;
+    } else {
+      console.log('Commande ')
+      this.formComp=false;
+    }
   }
+
 }

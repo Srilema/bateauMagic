@@ -33,11 +33,17 @@
   <ion-card-header>Commande</ion-card-header>
   <ion-list>
     <ion-item>
-      <ion-input label="Nom: " aria-required="true"></ion-input>
-      <ion-input label="Prénom: " aria-required="true"></ion-input>
+      <ion-item [ngClass]="{'invalid': name==null}">
+        <ion-input label="Nom: " aria-required="true" 
+        [(ngModel)]="name" name="name" type="text" aria-required="true" ></ion-input>
+      </ion-item>
+      <ion-item [ngClass]="{'invalid': nickname==null}">
+        <ion-input label="Prénom: " aria-required="true" 
+        [(ngModel)]="nickname" name="nickname"  type="text"></ion-input>
+      </ion-item>
     </ion-item>
-    <ion-item>
-      <ion-select placeholder="Choississez une adress de livraison" aria-required="true">
+    <ion-item [ngClass]="{'invalid': resto==null}">
+      <ion-select placeholder="Choississez une adress de livraison" [(ngModel)]="resto" name="resto" type="text" required [ngClass]="{'invalid': resto==null}">
         <ion-select-option *ngFor="let resto of restaurants">
           {{resto.name}}
         </ion-select-option>
@@ -45,7 +51,8 @@
     </ion-item>
   </ion-list>
   <div class="centerBut">
-    <ion-button color="skyblue" shape="round" (click)="finishCommand()">
+    <p class="redText" *ngIf="formComp">Il manque des informations, veuillez remplir les champs</p>
+    <ion-button color="skyblue" shape="round" (click)="finishCommand()" type="submit">
       Finalisez la commmande
     </ion-button>
   </div>

@@ -19,7 +19,7 @@ export const routes: Routes = [
     path: 'panier',
     loadComponent: () => import('./panier/panier.page').then( m => m.PanierPage)
   },
-
+  {
     path: 'description',
     loadComponent: () => import('./description/description.page').then( m => m.DescriptionPage)
   },
