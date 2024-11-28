@@ -1,6 +1,6 @@
 {
   "list": [
-    { "categorie":"bateaux" ,"name": "Bateau 1", "description": "Description du bateau 1" },
+    { "categorie":"bateaux" ,"name": "Bateau 1", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "photo": "assets\\photos\\bateau\\merry.jpg" },
     { "categorie":"bateaux" ,"name": "Bateau 2", "description": "Description du bateau 2" },
     { "categorie":"restaurants" ,"name": "Restaurant 1", "description": "Description du restaurant 1" },
     { "categorie":"restaurants" ,"name": "Restaurant 2", "description": "Description du restaurant 2" },
@@ -8,3 +8,4 @@
     { "categorie":"recettes" ,"name": "Recette 2", "description": "Description de la recette 2" }
   ]
 }
+
