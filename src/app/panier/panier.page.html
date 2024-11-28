@@ -32,7 +32,7 @@
   </div>
   <ion-card-header>Commande</ion-card-header>
   <ion-list>
-    <ion-item>
+    <div class="adapt">
       <ion-item [ngClass]="{'invalid': name==null}">
         <ion-input label="Nom: " aria-required="true" 
         [(ngModel)]="name" name="name" type="text" aria-required="true" ></ion-input>
@@ -41,7 +41,7 @@
         <ion-input label="Prénom: " aria-required="true" 
         [(ngModel)]="nickname" name="nickname"  type="text"></ion-input>
       </ion-item>
-    </ion-item>
+    </div>
     <ion-item [ngClass]="{'invalid': resto==null}">
       <ion-select placeholder="Choississez une adress de livraison" [(ngModel)]="resto" name="resto" type="text" required [ngClass]="{'invalid': resto==null}">
         <ion-select-option *ngFor="let resto of restaurants">

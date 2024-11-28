@@ -33,6 +33,7 @@ export class PanierPage implements OnInit {
   name!:string;
   nickname!:string;
   resto!:string;
+  test = true;
 
   constructor(private panierService: PanierService, private itemsService: ItemsService) {
    }
