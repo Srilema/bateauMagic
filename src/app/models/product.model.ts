@@ -10,7 +10,7 @@ export class Product {
         this.photo = photo;
         this.categorie = categorie;
         this.quantity = quantity;
-        this.price=price
+        this.price=price;
       }
     }
 
