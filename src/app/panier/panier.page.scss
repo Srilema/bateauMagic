@@ -19,3 +19,19 @@ ion-card{
         margin:0.5rem;
     }
 }
+.centerBut{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    justify-content: center;
+}
+
+ion-item.invalid{
+    --border-color: red !important;
+    --border:35px;
+}
+
+.redText{
+    color:red;
+    padding-left: 1rem;
+}
