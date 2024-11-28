@@ -24,5 +24,37 @@
     Total: {{total}} $
   </ion-card-title>
 </ion-card>
-
+<ion-card *ngIf="deliveryChoice, else elseBlock">
+  <div class="centerBut">
+    <ion-button color="skyblue" shape="round" (click)="chooseAdress()">
+      Annulez
+    </ion-button>
+  </div>
+  <ion-card-header>Commande</ion-card-header>
+  <ion-list>
+    <ion-item>
+      <ion-input label="Nom: " aria-required="true"></ion-input>
+      <ion-input label="Prénom: " aria-required="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-select placeholder="Choississez une adress de livraison" aria-required="true">
+        <ion-select-option *ngFor="let resto of restaurants">
+          {{resto.name}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <div class="centerBut">
+    <ion-button color="skyblue" shape="round" (click)="finishCommand()">
+      Finalisez la commmande
+    </ion-button>
+  </div>
+</ion-card>
+<ng-template #elseBlock>
+  <div class="centerBut">
+    <ion-button color="skyblue" shape="round" size="large" (click)="chooseAdress()">
+      Commandez
+    </ion-button>
+  </div>
+</ng-template>
 </ion-content>
