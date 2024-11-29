@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
-import { IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCardSubtitle, IonButton, IonGrid, IonRow, IonCol, IonList } from "@ionic/angular/standalone";
+import { IonContent, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCardSubtitle, IonButton, IonGrid, IonRow, IonCol, IonList } from "@ionic/angular/standalone";
 import { ItemsService } from 'src/app/Services/items.service';
 import { Item } from 'src/app/models/item';
 
@@ -10,7 +10,9 @@ import { Item } from 'src/app/models/item';
   templateUrl: './card-list.component.html',
   styleUrls: ['./card-list.component.scss'],
   standalone: true,
-  imports: [IonCol, IonRow, IonGrid, IonButton, IonCardSubtitle, IonCardTitle, IonCardHeader, CommonModule, IonCard, IonCardContent]
+
+  imports: [ IonCol, IonRow, IonGrid, IonButton, IonCardSubtitle, IonCardTitle, IonCardHeader, CommonModule, IonCard, IonCardContent]
+
 })
 export class CardListComponent implements OnInit {
   list!: Item[];
