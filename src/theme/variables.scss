@@ -5,6 +5,10 @@
     --ion-color-skyblue: #0496FF;
     --ion-color-seablue: #1C448E;
     --ion-color-cream: #F5F8DE;
+
+    .ion-header{
+        --opacity-scale: 1 !important;
+    }
 }
 
 .ion-color-skyblue{
@@ -16,3 +20,4 @@
 .ion-color-cream{
     --ion-color-base: var(--ion-color-cream);
 }
+
