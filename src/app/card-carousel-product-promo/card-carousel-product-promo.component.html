@@ -1,14 +1,14 @@
 <swiper-container 
   navigation="true"
   pagination="true"
-  [slidesPerView]="2"
+  [slidesPerView]="1"
   
   
   >
     <swiper-slide *ngFor="let product of productsPromoList" >
-      <ion-card >
+      <ion-card class="custom-card">
         <ion-row>
-          <ion-col size="5" class="col">
+          <ion-col size="5" class="col" class="ion-text-center">
             <ion-row>
               <img [src]="product.imageUrl" alt="Product Image" />
             </ion-row>
@@ -20,7 +20,8 @@
       <ion-col size="7">
         <ion-card-header>
           <ion-card-title>{{ product.name }}</ion-card-title>
-          <ion-card-subtitle>{{ product.originalPrice }}</ion-card-subtitle>
+          <ion-card-subtitle size="large">{{product.promoPrice}}</ion-card-subtitle>
+         <S> <ion-card-content > {{product.originalPrice}}</ion-card-content></S>
         </ion-card-header>
         <ion-card-content>
           {{ product.description }}
