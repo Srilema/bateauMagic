@@ -45,6 +45,7 @@ export class PanierPage implements OnInit {
 
   ngOnInit() {
     this.loadPanier();
+    this.loadCategories();
     this.deliveryChoice = false;
     this.formComp = false;
   }
@@ -107,6 +108,7 @@ export class PanierPage implements OnInit {
     } else {
       console.log('Commande ')
       this.formComp=false;
+      this.panierService.clearStorage();
     }
   }
  

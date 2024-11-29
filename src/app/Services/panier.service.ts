@@ -52,6 +52,9 @@ export class PanierService {
     await this.storage.set('product', this.listProduitPanier);
     console.log('panierExistant :', panierExistant);
   }
+  clearStorage(){
+    store.clear();
+  }
   
   
   
