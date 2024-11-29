@@ -5,6 +5,8 @@ import { IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, 
 import { CommonModule } from '@angular/common';
 import { CardButtonQuantityComponent } from '../card-button-quantity/card-button-quantity.component';
 import { register } from 'swiper/element/bundle';
+import { Product } from '../models/product.model';
+import { PanierService } from '../Services/panier.service';
 register();
 
 @Component({
@@ -37,7 +39,7 @@ export class CardCarouselProductPromoComponent implements OnInit {
     loop: true,
   };
 
-  constructor(private productsService: ProductsService) {}
+  constructor(private productsService: ProductsService,private panierService:PanierService) {}
 
   ngOnInit() {
     this.loadProductsPromo();
@@ -54,5 +56,9 @@ export class CardCarouselProductPromoComponent implements OnInit {
         console.error('Erreur lors de la récupération des produits en promotion', err);
       }
     );
+  }
+  setProduct( product:Product | Promotion){
+    this.panierService.setSelectedProduct(product);
+    console.log('Product', product);
   }
 }

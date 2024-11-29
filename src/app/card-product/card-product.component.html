@@ -22,8 +22,8 @@
                 </ion-card-header>
               </ion-col>
             </ion-row>
-            <ion-row class="button-product" >
-              <app-card-button-quantity></app-card-button-quantity>
+            <ion-row class="button-product">
+              <app-card-button-quantity (click)="setProduct(product)"></app-card-button-quantity>
             </ion-row>
           </ion-grid>
         </ion-card>

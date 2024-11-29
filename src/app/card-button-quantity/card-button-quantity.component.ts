@@ -4,6 +4,8 @@ import { ModalController } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { IonButton, IonContent, IonItem, IonInput, IonLabel, IonButtons, IonTitle, IonToolbar, IonHeader, IonModal, IonRow, IonCol } from "@ionic/angular/standalone";
 import { Product } from '../models/product.model';
+import { PanierService } from '../Services/panier.service';
+import { Promotion } from '../models/promotion.model';
 
 @Component({
   selector: 'app-card-button-quantity',
@@ -14,11 +16,14 @@ import { Product } from '../models/product.model';
   providers: [ModalController],
 })
 export class CardButtonQuantityComponent  implements OnInit {
-  quantity!: string;
+  quantity!: any;
   @Output() quantitySubmitted = new EventEmitter<number>();
   isModalOpen = false;
+  product!: any;
+  productPanier!:any;
 
-  constructor() {}
+  
+  constructor(private panierService: PanierService) {}
 ngOnInit(): void {
   
 }
@@ -38,9 +43,13 @@ ngOnInit(): void {
     // Vous pouvez ici nettoyer ou réinitialiser certaines valeurs si nécessaire
   }
   envoiData(){
-    
-      console.log(this.quantity)
+      
+      this.product = this.panierService.getSelectedProduct();
+      this.productPanier= {product:this.product,quantity:this.quantity}
+      this.panierService.savePanier(this.productPanier);
+      console.log(this.quantity);
+      this.quantity = ""
       this.closeModal();
-    
+      
   }
 }

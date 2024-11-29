@@ -4,6 +4,8 @@ import { ProductsService } from '../Service/products.service';
 import { Product } from '../models/product.model';
 import { CommonModule } from '@angular/common';
 import { CardButtonQuantityComponent } from "../card-button-quantity/card-button-quantity.component";
+import { PanierService } from '../Services/panier.service';
+import { Promotion } from '../models/promotion.model';
 
 @Component({
   selector: 'app-card-product',
@@ -14,7 +16,7 @@ import { CardButtonQuantityComponent } from "../card-button-quantity/card-button
 })
 export class CardProductComponent implements OnInit {
   productsList!:Product[];
-  constructor(private productsService:ProductsService) {}
+  constructor(private productsService:ProductsService, private panierService:PanierService) {}
 
   ngOnInit() {
     this.loadProducts();
@@ -27,5 +29,9 @@ export class CardProductComponent implements OnInit {
         console.log('erreur product list')
       }
     );
+  }
+  setProduct( product:Product ){
+    this.panierService.setSelectedProduct(product);
+    console.log('Product', product);
   }
 }

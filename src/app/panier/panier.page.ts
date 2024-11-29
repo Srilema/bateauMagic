@@ -6,6 +6,7 @@ import { IonItem, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCardS
 import { HeaderComponent } from '../header/header.component';
 import { PanierService } from 'src/app/Services/panier.service';
 import { Product } from 'src/app/models/product.model';
+import { Promotion } from '../models/promotion.model';
 
 
 
@@ -15,13 +16,16 @@ import { Product } from 'src/app/models/product.model';
   styleUrls: ['./panier.page.scss'],
   standalone: true,
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, HeaderComponent, IonItem,
-    IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCardSubtitle, IonButton, IonGrid, IonRow, IonCol, IonList]
+    IonCard, IonCardTitle, IonCol, IonList]
 })
 export class PanierPage implements OnInit {
   list! : Product[];
   total! : number;
   tempTotal!:number;
-
+  receivedProduct!:Product | Promotion ;
+  receivedQuantity!:any;
+  productPanier!: { product: any, quantity: number }[];
+  panier!: any;
   constructor(private panierService: PanierService) {
    }
 
@@ -30,28 +34,28 @@ export class PanierPage implements OnInit {
   }
 
   loadPanier(){
-    this.panierService.getPanier().subscribe({
-      next: (response) => {
-        console.log("data retrieved ", response);
-        this.list = response.products;
-        console.log("list: ",this.list);
-        this.addTotal();
-      },      
-      error: (error) => {
-        console.error('Erreur de chargement des données:', error);
-      },
-    })
+   this.panier = this.panierService.getPanier().then(res=>{
+    console.log('res',res);
+    this.panier = res;
+    console.log('panier',this.panier);
+   },
+    err=>{
+      console.log('erreur pendant le chargement du panier ', err)
+    }
+  );
+
   }
+  
 
   addTotal(){
     var tempTotal = 0;
     this.list.forEach(element => {
       var temp = element.quantity*element.price;
       tempTotal = tempTotal+temp;
-      console.log(this.tempTotal)
+    //  console.log(this.tempTotal)
     });
     this.total = tempTotal;
-    console.log(this.total)
+   // console.log(this.total)
   }
 
 }
